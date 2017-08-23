@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.mysqlitedata.db.Search"
+    tools:showIn="@layout/app_bar_search">
+
+    <EditText
+        android:id="@+id/editFnameSearch"
+        android:layout_width="180dp"
+        android:layout_height="37dp"
+        android:ems="10"
+        android:hint="@string/first_name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editLnameSearch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/fNameGrp" />
+
+    <RadioGroup
+        android:id="@+id/fNameGrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/editFnameSearch"
+        app:layout_constraintBottom_toTopOf="@+id/lNameGrp">
+
+        <RadioButton
+            android:id="@+id/radioFOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/off" />
+
+        <RadioButton
+            android:id="@+id/radioFoN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/on" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editLnameSearch"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/checkIsActiveSearch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFnameSearch"
+        app:layout_constraintRight_toLeftOf="@+id/lNameGrp" />
+
+    <RadioGroup
+        android:id="@+id/lNameGrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="@+id/fNameGrp"
+        app:layout_constraintTop_toBottomOf="@+id/fNameGrp"
+        app:layout_constraintBottom_toTopOf="@+id/activeNameGrp"
+        app:layout_constraintLeft_toLeftOf="@+id/fNameGrp">
+
+        <RadioButton
+            android:id="@+id/radioLOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/off" />
+
+        <RadioButton
+            android:id="@+id/radioLoN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/on" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkIsActiveSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/active_contact"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editLnameSearch"
+        app:layout_constraintBottom_toTopOf="@+id/editTelSearch"
+        app:layout_constraintRight_toLeftOf="@+id/activeNameGrp" />
+
+    <RadioGroup
+        android:id="@+id/activeNameGrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="@+id/lNameGrp"
+        app:layout_constraintTop_toBottomOf="@+id/lNameGrp"
+        app:layout_constraintBottom_toTopOf="@+id/editTelSearch"
+        app:layout_constraintLeft_toLeftOf="@+id/lNameGrp">
+
+        <RadioButton
+            android:id="@+id/radioActiveOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/off" />
+
+        <RadioButton
+            android:id="@+id/radioActiveoN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/on" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTelSearch"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/phone"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/editAddressSearch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activeNameGrp"
+        app:layout_constraintRight_toLeftOf="@+id/telNameGrp" />
+
+    <RadioGroup
+        android:id="@+id/telNameGrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="@+id/activeNameGrp"
+        app:layout_constraintTop_toBottomOf="@+id/activeNameGrp"
+        app:layout_constraintBottom_toTopOf="@+id/addrNameGrp"
+        app:layout_constraintLeft_toLeftOf="@+id/activeNameGrp">
+
+        <RadioButton
+            android:id="@+id/radioTelOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/off" />
+
+        <RadioButton
+            android:id="@+id/radioTeloN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/on" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editAddressSearch"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/address"
+        android:inputType="textPostalAddress"
+        app:layout_constraintBottom_toTopOf="@+id/btnCloseSearch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTelSearch"
+        app:layout_constraintRight_toLeftOf="@+id/addrNameGrp" />
+
+    <RadioGroup
+        android:id="@+id/addrNameGrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="@+id/telNameGrp"
+        app:layout_constraintTop_toBottomOf="@+id/telNameGrp"
+        app:layout_constraintBottom_toTopOf="@+id/btnResetSearch"
+        app:layout_constraintLeft_toLeftOf="@+id/telNameGrp">
+
+        <RadioButton
+            android:id="@+id/radioAddrOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/off" />
+
+        <RadioButton
+            android:id="@+id/radioAddroN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/on" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCloseSearch"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/ic_highlight_off_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnResetSearch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnResetSearch"
+        app:layout_constraintTop_toTopOf="@+id/btnResetSearch"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnResetSearch"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/ic_refresh_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSearch"
+        app:layout_constraintLeft_toRightOf="@+id/btnCloseSearch"
+        app:layout_constraintRight_toLeftOf="@+id/btnSearch"
+        app:layout_constraintTop_toTopOf="@+id/btnSearch"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="42dp"
+        android:background="@drawable/ic_search_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/btnResetSearch"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAddressSearch"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>
